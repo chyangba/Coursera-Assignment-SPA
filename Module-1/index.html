@@ -11,24 +11,10 @@
   
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
-      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
+    /*  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;*/
 }
-.red{
-    color:red;
-}
-.green{
-    color: green;
-}
-.def{
-    color: black;
-}
-.redFocus {
-    border-color: red;
-}
-.greenFocus {
-    border-color: green;
-}
+
     </style>
   </head>
 <body>
@@ -44,9 +30,9 @@
          <div class="form-group">
              <button class="btn btn-default" ng-click="checkItems(inputItem)">Check If Too Much</button>
          </div>
-         <div class="form-group message {{textColor}}"  ng-model="textColor">
+         <div class="form-group message {{color}}"  ng-model="color">
            <!-- Your message can go here. -->
-           {{resaultCheck}}
+           {{resultCheck}}
          </div>
      </div>
 
