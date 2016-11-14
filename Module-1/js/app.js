@@ -5,12 +5,12 @@
     function lunchController($scope){
         $scope.checkItems = function(str){
             if(!str || 0 === str.length){
-                $scope.resaultCheck = 'Please enter data first';
-                $scope.active = 'redFocus';
-                $scope.textColor = 'def';
+                $scope.resultCheck = 'Please enter data first';
+                $scope.active = 'text-danger';
+               
             }else{
-                $scope.active = 'greenFocus';
-                $scope.inputColor = 'red';
+                $scope.active = 'text-success';
+                $scope.inputColor = 'text-danger';
                 var strArrey = str.split('');
                 var count = 0;
                 for(var i = 0; i < strArrey.length; i++){
@@ -19,11 +19,11 @@
                     }
                 }
                 if( count < 3){
-                    $scope.resaultCheck = "Enjoy!";
-                    $scope.textColor = 'green';
+                    $scope.resultCheck = "Enjoy!";
+                    $scope.color = 'text-success';
                 }else{
-                    $scope.resaultCheck = "Too much!";
-                    $scope.textColor = 'red';
+                    $scope.resultCheck = "Too much!";
+                    $scope.color = 'text-danger';
                     
                 }
             }
